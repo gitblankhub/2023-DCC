@@ -5,7 +5,7 @@ SEP 2023 - DEC 2023
 데이터셋 출처 : https://aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=data&dataSetSn=79    
 https://aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=data&dataSetSn=242  
 
-분석 목적 : 
+분석 목적 :  Resnet 계열 아키텍처를 이용하여 한국 음식 이미지 데이터셋을 분류하는 모형을 구축하고 결과를 분석. 성능 향상을 위해 아키텍처 변경/LR scheduling, augmentation 등의 작업을 수행하고 결과 비교. 그 후 학습 시킨 모델 transfer learning을 거쳐 건강관리를 위한 음식 이미지 데이터셋 분류. 
 
 ## 0. Data
 - kfood_train : 학습데이터, 33593 images, 42 kinds of food classes(갈비구이, 갈치구이, .. 황태구이, 훈제오리) 
@@ -32,9 +32,8 @@ validation acc = 0.91, test acc = 0.6065 -> *overfitting problem*
 > Residual learning framework makes deep network train easier. Network do easier residual mapping $F(x)=H(x)-x$ instead of directing mapping $H(x)$.      
 > A residual block forms a building blocks of ResNets. Each block has a few stacked layers and identity shortcut connection that **skips** layers. Output of block is sum of original input and out put of stacked layer. $Output = F(x)+x$  
 
-## Mission 2
+## Mission 2  
 **kfood_train**, **kfood_val** dataset  
-
 
 (We've tried resnet34, 50 models and various kinds of augmentation combination, learning rate, epoch tuning!)     
 
@@ -48,15 +47,13 @@ Image Augmentation for train data : RandomRotation(회전), CenterCrop
 
 validation acc = 0.71, test acc = 0.745
 
-
 [본선] 
 - Resnet 101     
   epoch = 70, batch size = 64, optimizer = Adam, learning rate = 0.001      
-  (We've tried Resnet50 Resnet101 Resnet154 architectures.. learning rate and epoch tuning.. lots of models!)        
-
+  (We've tried Resnet50 Resnet101 Resnet154 architectures.. learning rate and epoch tuning.. lots of models!)         
 test acc = 0.7918 
- 
 
+ 
 ## Mission 3
 **kfood_health_train**, **kfood_health_val** dataset  
 Mission2에서 학습한 모델을 활용하여 건강관리를 위한 음식 이미지 데이터를 13개의 클래스로 분류하는 모델 학습.      
@@ -81,10 +78,8 @@ test acc = 0.95
 
 
 
-[본선] 
-
-epoch=50 , optimizer = Adam, learning rate = 0.001 
-
+[본선]     
+epoch=50 , optimizer = Adam, learning rate = 0.001     
 test acc = 0.980
 
 
