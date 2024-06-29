@@ -2,7 +2,8 @@
 
 SEP 2023 - DEC 2023
 
-데이터셋 출처 : https://aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=data&dataSetSn=79
+데이터셋 출처 : https://aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=data&dataSetSn=79    
+https://aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=data&dataSetSn=242  
 
 분석 목적 : 
 
@@ -47,8 +48,8 @@ Image Augmentation for train data : RandomRotation(회전), CenterCrop
 
 validation acc = 0.71, test acc = 0.745
 
-[본선]
 
+[본선] 
 - Resnet 101     
   epoch = 70, batch size = 64, optimizer = Adam, learning rate = 0.001      
   (We've tried Resnet50 Resnet101 Resnet154 architectures.. learning rate and epoch tuning.. lots of models!)        
@@ -70,15 +71,14 @@ Full Connected Layer 13개의 classes로 수정
   method2) 초기 일부 layers는 freezing 하고 후반 layers들만 training 하기.
 
 - Resnet101
-  batchsize = 64 
+  batchsize = 64
+test acc = 0.95
 
 > [SelfStudy] Transfer learning & fine tuning       
 > pytorch tutorials : (https://tutorials.pytorch.kr/beginner/transfer_learning_tutorial.html)       
 > Transfer learning : ML technique where pretrained model is used as starting point of new task. Instead of training model from scratch, use model that has already trained on other dataset.        
 > Fine tuning : Replace the final layers to match the number of classes in new task. Then, optionally freeze initial layers to prevent updtaing.       
 
-
-test acc = 0.95
 
 
 [본선] 
@@ -90,4 +90,5 @@ test acc = 0.980
 
 
 
+*본선 최종 제출 파일 not uploaded*
 
