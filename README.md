@@ -64,14 +64,14 @@ Mission2에서 학습한 checkpoint(mission2.pt)를 불러와 resnet50 모델에
 Full Connected Layer 13개의 classes로 수정 
 
 - Fine tuning
-  method1) train the entire model. Freezing 없이 모든 layer의 가중치를 다시 training 하기. (slightly better perf)
-  method2) 초기 일부 layers는 freezing 하고 후반 layers들만 training 하기.
+  method1) train the entire model. Freezing 없이 모든 layer의 가중치를 다시 training 하기. (slightly better perf)      
+  method2) 초기 일부 layers는 freezing 하고 후반 layers들만 training 하기.    
 
 - Resnet101
   batchsize = 64
 test acc = 0.95
 
-> [SelfStudy] Transfer learning & fine tuning       
+> (SelfStudy) Transfer learning & fine tuning       
 > pytorch tutorials : (https://tutorials.pytorch.kr/beginner/transfer_learning_tutorial.html)       
 > Transfer learning : ML technique where pretrained model is used as starting point of new task. Instead of training model from scratch, use model that has already trained on other dataset.        
 > Fine tuning : Replace the final layers to match the number of classes in new task. Then, optionally freeze initial layers to prevent updtaing.       
