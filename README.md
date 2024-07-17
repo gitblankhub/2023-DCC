@@ -26,7 +26,7 @@ batch size = 32, image resize = 224 x 224
 
 validation acc = 0.91, test acc = 0.6065 -> *overfitting problem*  
 
-> (Self Study) ResNet    
+> (Study) ResNet    
 > [Paper] Deep Residual Learning for Image Recognition https://arxiv.org/pdf/1512.03385v1     
 > As depth of NN increases, dedgradation problem(not overfitted but error is larger) might occurs.     
 > Residual learning framework makes deep network train easier. Network do easier residual mapping $F(x)=H(x)-x$ instead of directing mapping $H(x)$.      
@@ -72,7 +72,7 @@ Full Connected Layer 13개의 classes로 수정
 
 test acc = 0.95
 
-> (SelfStudy) Transfer learning & fine tuning       
+> (Study) Transfer learning & fine tuning       
 > pytorch tutorials : (https://tutorials.pytorch.kr/beginner/transfer_learning_tutorial.html)       
 > Transfer learning : ML technique where pretrained model is used as starting point of new task. Instead of training model from scratch, use model that has already trained on other dataset.        
 > Fine tuning : Replace the final layers to match the number of classes in new task. Then, optionally freeze initial layers to prevent updtaing.       
